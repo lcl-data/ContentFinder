@@ -1,0 +1,17 @@
+Project Description: ? 
+Try to find the content in every file in your folder.
+
+Support File Type Now: 
+xml,txt,xsd,html,pdf,config,cs,csproj,manifest,resx,settings,sln,user,vb,vspscc,vssscc,xaml.
+xls,xlsx,ppt,pptx,docx.doc(only support strings),c,cc,cpp,h.
+
+Using technology: 
+C#,Task,Regular expression,WPF,Open Xml.
+
+Useful tips 
+The search box support Regular expression. 
+The following wildcard specifiers are permitted in the filter parameter : 
+*   Zero or more Characters 
+?   Exactly one character. 
+Double click the item in the searched item , can open the file in notepad.exe. 
+Support multiple search directory , split them by ; 
