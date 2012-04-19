@@ -1,0 +1,34 @@
+﻿<Window x:Class="ContentFinder.SettingsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="SettingsDialog" Height="188" Width="470" ResizeMode="NoResize">
+    <Grid>
+        <DockPanel Margin="8">
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Name="ButtonOK" Click="ButtonOK_Click" Margin="8,8,4,8" Padding="20,4,20,4">OK</Button>
+                <Button Name="ButtonCancel" Click="ButtonCancel_Click" Margin="4,8,8,8" Padding="12,4,12,4">Cancel</Button>
+            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="29"></RowDefinition>
+                    <RowDefinition Height="29"></RowDefinition>
+                    <RowDefinition Height="29" />
+                    <RowDefinition Height="8*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0">Search Folder:</Label>
+                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Path=SearchFolder}"></TextBox>
+                <Label Grid.Row="1" Grid.Column="0">File Filter:</Label>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path=FileFilter}"></TextBox>
+                <Label     Grid.Row="2" Grid.RowSpan="2">Show Warning:</Label>
+                <ComboBox Grid.Column="1" Grid.Row="2"  SelectedValuePath="Tag" Name="comboBoxShowWarning" Text="{Binding Path=ShowWarning}">
+                    <ComboBoxItem Content="True" Tag="True"/>
+                    <ComboBoxItem Content="False" Tag="False"/>
+                </ComboBox>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

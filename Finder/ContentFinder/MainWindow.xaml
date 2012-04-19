@@ -1,0 +1,23 @@
+﻿<Window x:Class="ContentFinder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Finder" Height="350" Width="525" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="364*" />
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="70" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="272*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <TextBox Height="23" HorizontalAlignment="Left" Name="textBox1" VerticalAlignment="Top" Width="120" Grid.RowSpan="2" Text="Your Content" ToolTip="Insert your content and type {ENTER} can start search" KeyDown="textBox1_KeyDown" />
+        <Button Content="Search" Height="23" HorizontalAlignment="Left" Margin="118,0,0,0" Name="btSearch" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Click="search_Click" />
+        <ListBox Grid.Row="1"  Name="lbResult" MouseDoubleClick="lbResult_MouseDoubleClick" Grid.ColumnSpan="3" />
+        <Label Content="" Height="23" HorizontalAlignment="Left" Margin="190,0,0,0" Name="label1" VerticalAlignment="Top" Grid.RowSpan="2" />
+        <Button Content="Option"   Name="btOption"  Click="Option_Click"  Grid.Column="2" Grid.Row="0"/>
+        <ProgressBar  Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2"  Name="pbProgress"  Maximum="100"  />
+    </Grid>
+</Window>
